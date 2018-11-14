@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Restfull API Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <table>
+    	<thead>
+    		<tr>
+    			<th>ID</th>
+    			<th>NAME</th>
+    			<th>DESIGNATION</th>
+    			<th>EXPERTISE</th>
+    			<th>CREATE AT</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<th:block th:each="employee : ${employees}">
+			    <tr>
+	    			<td th:text="${employee.id}"></td>
+	    			<td th:text="${employee.name}"></td>
+	    			<td th:text="${employee.designation}"></td>
+	    			<td th:text="${employee.expertise}"></td>
+	    			<td th:text="${employee.createdAt}"></td>
+	    		</tr>
+			</th:block>
+    	</tbody>
+    </table>
+</body>
+</html>
